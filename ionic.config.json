@@ -1,0 +1,7 @@
+{
+  "name": "Navegante",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
