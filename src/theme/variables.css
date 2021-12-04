@@ -3,13 +3,20 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
+
+  --ion-background-color-accent: #b4ba3c;
+  --ion-background-color: #ffffffff;
+
+  --ion-text-color: #000;
+  --ion-text-color-rgb: 255,255,255;
+
   /** primary **/
-  --ion-color-primary: #ced6ab;
+  --ion-color-primary: #b4ba3c;
   --ion-color-primary-rgb: 206, 214, 171;
   --ion-color-primary-contrast: #000000;
   --ion-color-primary-contrast-rgb: 0, 0, 0;
-  --ion-color-primary-shade: #b5bc96;
-  --ion-color-primary-tint: #d3dab3;
+  --ion-color-primary-shade: #9ea435;
+  --ion-color-primary-tint: #bcc150;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -82,13 +89,33 @@ http://ionicframework.com/docs/theming/ */
    * -------------------------------------------
    */
 
+  :root .ios{
+    --ion-background-color-accent: #2f5728;
+    --ion-background-color: #000000;
+    --ion-background-color-rgb: 0,0,0;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+  }
+
+  :root .md{
+    --ion-background-color-accent: #2f5728;
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #222222;
+  }
+
   body {
-    --ion-color-primary: #ced6ab;
+    --ion-color-primary: #b4ba3c;
     --ion-color-primary-rgb: 206, 214, 171;
     --ion-color-primary-contrast: #000000;
     --ion-color-primary-contrast-rgb: 0, 0, 0;
-    --ion-color-primary-shade: #b5bc96;
-    --ion-color-primary-tint: #d3dab3;
+    --ion-color-primary-shade: #9ea435;
+    --ion-color-primary-tint: #bcc150;
 
     --ion-color-secondary: #50c8ff;
     --ion-color-secondary-rgb: 80,200,255;
@@ -153,6 +180,7 @@ http://ionicframework.com/docs/theming/ */
    */
 
   .ios body {
+    --ion-background-color-accent: #2f5728;
     --ion-background-color: #000000;
     --ion-background-color-rgb: 0,0,0;
 
@@ -197,6 +225,7 @@ http://ionicframework.com/docs/theming/ */
    */
 
   .md body {
+    --ion-background-color-accent: #2f5728;
     --ion-background-color: #121212;
     --ion-background-color-rgb: 18,18,18;
 

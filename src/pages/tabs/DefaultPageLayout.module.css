@@ -1,0 +1,41 @@
+body .background {
+    background-color: var(--ion-background-color-accent, #b4ba3c);
+    height: 100%;
+    width: 100%;
+    color: var(--ion-text-color, #000);
+}
+
+.contentArea {
+    background-color: var(--ion-background-color, #ffffff);
+    border-radius: 30px 30px 0px 0px;
+    padding: 25px 25px;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    padding: 45px 25px 25px 25px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.logo {
+    height: 6vh;
+}

@@ -1,0 +1,39 @@
+.cartao{
+    color: #0A0A0D;
+    background-image: url(../../../../resources/Card.png);
+    background-size: 100% 100%;
+    width: 325px;
+    height: 205px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.infoCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+.name{
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+.photo{
+    height: 130px;
+    width: 100px;
+    object-fit: cover;
+}
+
