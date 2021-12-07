@@ -15,7 +15,12 @@ import TrajetoTab from './pages/tabs/Trajeto/TrajetoTab';
 import HistoricoTab from './pages/tabs/Historico/HistoricoTab'
 import UserTab from './pages/tabs/User/UserTab'
 import Alertas from './pages/notabs/Alertas/Alertas';
-import Passe from './pages/notabs/Alertas/Passe/Passe';
+import Passe from './pages/notabs/Passe/Passe';
+import Bilhetes from './pages/notabs/Bilhetes/Bilhetes'
+import Bilhete from './pages/notabs/Bilhete/Bilhete'
+import Conta from './pages/notabs/Conta/Conta';
+import Zapping from './pages/notabs/Zapping/Zapping';
+import Estatuto from './pages/notabs/Estatuto/Estatuto';
 
 
 const BasePage = () => {
@@ -29,6 +34,21 @@ const BasePage = () => {
                         </Route>
                         <Route exact path="/notabs/passe">
                             <Passe/>
+                        </Route>
+                        <Route exact path="/notabs/bilhetes">
+                            <Bilhetes/>
+                        </Route>
+                        <Route exact path="/notabs/bilhetes/:index">
+                            <Bilhete />
+                        </Route>
+                        <Route exact path="/notabs/zapping">
+                            <Zapping/>
+                        </Route>
+                        <Route exact path="/notabs/conta">
+                            <Conta/>
+                        </Route>
+                        <Route exact path="/notabs/estatuto">
+                            <Estatuto/>
                         </Route>
                     </IonRouterOutlet>
                 )

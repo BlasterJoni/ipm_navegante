@@ -1,0 +1,45 @@
+.information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.submitProfile{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.submitFile{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ion-color-light);
+}
+
+.file{
+    display: none;
+}

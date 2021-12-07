@@ -1,25 +1,31 @@
-import { IonIcon, IonContent, IonPage, IonButton} from '@ionic/react';
+import { useSelector } from 'react-redux';
+import { IonIcon, IonPage, IonButton, IonContent } from '@ionic/react';
+import { useHistory } from "react-router-dom";
 import { arrowBack, notificationsOutline } from 'ionicons/icons';
 import styles from './Alertas.module.css';
 import AlertaItem from './AlertaItem/AlertaItem'
+import DefaultPageLayout from '../DefaulPageLayout';
 
-const Alertas = () => {
+const Alertas = (props) => {
+
+  const history = useHistory();
+  const alerts = useSelector(state => state.data.alerts);
+
+  const alertsItems = alerts.map((value, index) => {
+    return <AlertaItem alert={value} key={index} />
+  });
 
   return (
     <IonPage>
-      <div className={styles.base}>
-        <div className={styles.backArrow}>
-          <IonButton fill="clear" color="dark">
-            <IonIcon icon={arrowBack}/>
-          </IonButton>
-        </div>
-        
-        <div>
-          <p className={styles.title}>Alertas<IonIcon icon={notificationsOutline}/></p>
-        </div>
-      
-      
-      </div>
+      <DefaultPageLayout title="Alertas" icon={notificationsOutline}>
+        <IonContent
+          scrollEvents={true}
+          onIonScrollStart={() => { }}
+          onIonScroll={() => { }}
+          onIonScrollEnd={() => { }}>
+          {alertsItems}
+        </IonContent>
+      </DefaultPageLayout>
     </IonPage>
   );
 };

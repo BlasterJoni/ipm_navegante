@@ -16,6 +16,22 @@
     font-weight: bold;
     font-size: 32px;
     margin-left: 25px;
-    margin-bottom: 16px;
     color: var(--ion-text-color);
+}
+
+.ticketsList{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.buyButton{
+    margin: 10px;
 }

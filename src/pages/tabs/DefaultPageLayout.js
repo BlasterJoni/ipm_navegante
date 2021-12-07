@@ -1,13 +1,12 @@
 import { IonIcon, IonFabButton, IonRouterLink } from '@ionic/react';
 import { notificationsOutline } from 'ionicons/icons';
 import styles from './DefaultPageLayout.module.css';
-import logo from "../../resources/logo.png";
 
 const DefaultPageLayout = (props) => {
     return (
         <div className={styles.background}>
             <div className={styles.header}>
-                <img src={logo} alt="Navegante's Logo" className={styles.logo} />
+                <img src={"/assets/logo.png"} alt="Navegante's Logo" className={styles.logo} />
                 <IonFabButton size="small" color="light" href="/notabs/alertas">
                     <IonIcon icon={notificationsOutline}/>
                 </IonFabButton>

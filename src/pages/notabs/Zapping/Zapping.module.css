@@ -1,0 +1,28 @@
+.content{
+    height: 100%;
+}
+
+.saldoArea{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.saldoArea{
+    color: var(--ion-text-color);
+}
+
+.saldoDisponivel{
+    font-size: 24px;
+    margin-bottom: -40px;
+}
+
+.saldo{
+    font-size: 90px;
+}
+
+.button{
+    height: 10%;
+}

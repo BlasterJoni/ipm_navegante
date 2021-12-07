@@ -20,6 +20,66 @@
     flex-direction: column;
     height: 95%;
     border-radius: 30px 30px 30px 30px;
-    padding: 25px 25px;
+    padding: 25px 15px;
     margin: 0 20px 20px 20px;
+}
+
+.header{
+    flex: 2;
+    border-bottom: 1px solid var(--ion-color-medium);
+}
+
+.title{
+    font-size: 32px;
+    margin-bottom: -5px;
+    color: var(--ion-text-color);
+}
+
+.subtitle{
+    font-size: 13px;
+    color: var(--ion-color-dark);
+}
+
+.content{
+    flex: 18;
+    padding-top: 15px;
+    padding-bottom: 17.5px;
+}
+
+.qr{
+    flex: 9;
+    border-top: 1px dashed var(--ion-color-medium);
+    position: relative;
+    padding-top: 17.5px;
+}
+
+.circleLeft{
+    background-color: var(--ion-background-color-accent);
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    top: -17.5px;
+    left: -35px;
+}
+
+.circleRight{
+    background-color: var(--ion-background-color-accent);
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    top: -17.5px;
+    right: -35px;
+}
+
+.fullscreenBG{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.qrClickBox{
+    height: 100%;
+    width: 100%;
 }

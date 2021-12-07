@@ -1,0 +1,86 @@
+.base{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--ion-background-color);
+}
+
+.backArrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.container{
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--ion-text-color);
+}
+
+.userPicture{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.photo{    
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid var(--ion-color-medium);
+    margin-bottom: 15px;
+}
+
+.information{
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #0A3189;
+    background-color: #C8E2FF;
+    border-radius: 10px;
+}
+
+.subcategory{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top : 10px;
+    color: var(--ion-text-color);
+}
+
+.userInfo{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid var(--ion-color-medium);
+}
+
+.fieldTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.button{
+    margin-top: 20px;
+    width: 100%;
+}
+
+ion-input {
+    --padding-end: 0px !important;
+    --padding-bottom: 3px !important;
+    --padding-start: 0px !important;
+    --padding-top: 0px !important;
+  }

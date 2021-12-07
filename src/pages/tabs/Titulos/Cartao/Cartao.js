@@ -1,5 +1,4 @@
 import styles from "./Cartao.module.css"
-import cartaoImage from "../../../../resources/Card.png"
 import { useSelector } from 'react-redux'
 
 const Cartao = (props) => {
