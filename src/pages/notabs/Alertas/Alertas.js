@@ -8,7 +8,6 @@ import DefaultPageLayout from '../DefaulPageLayout';
 
 const Alertas = (props) => {
 
-  const history = useHistory();
   const alerts = useSelector(state => state.data.alerts);
 
   const alertsItems = alerts.map((value, index) => {

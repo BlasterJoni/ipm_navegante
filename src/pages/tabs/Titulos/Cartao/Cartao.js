@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const Cartao = (props) => {
 
-    const user = useSelector((state) => state.data.user)
+    const user = useSelector((state) => state.data.activeUser.user)
 
     return(
         <div className={styles.cartao}>

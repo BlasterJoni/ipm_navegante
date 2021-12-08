@@ -8,7 +8,7 @@ import { useParams } from 'react-router';
 const Passe = () => {
 
   const { index } = useParams();
-  const ticket = useSelector(state => state.data.tickets[index]);
+  const ticket = useSelector(state => state.data.activeUser.tickets[index]);
 
   return (
     <IonPage>

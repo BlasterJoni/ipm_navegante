@@ -4,11 +4,10 @@ import styles from './Conta.module.css';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import DefaultPageLayout from '../DefaulPageLayout';
-import { personOutline } from 'ionicons/icons';
 
 const Conta = () => {
 
-  const user = useSelector(state => state.data.user);
+  const user = useSelector(state => state.data.activeUser.user);
 
   const [editMode, setEditMode] = useState(false);
   const [editPassword, setEditPassword] = useState(false);

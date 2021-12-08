@@ -1,0 +1,38 @@
+.item{
+    height: 75px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid var(--ion-color-medium);
+    background-color: var(--ion-background-color);
+    padding: 10px;
+}
+
+.imageContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    max-height: 100%;
+    height: 100%;
+}
+
+.image{
+    height: 100%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+
+
+.number{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: var(--ion-text-color);
+    margin-left: 40px;
+    font-weight: bold;
+}
+

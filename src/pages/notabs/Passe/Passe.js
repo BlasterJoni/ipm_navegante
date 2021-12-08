@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 const Passe = () => {
 
-  const transitPass = useSelector(state => state.data.transitPass);
+  const transitPass = useSelector(state => state.data.activeUser.transitPass);
 
   const profile = transitPass.profile == "4_18" || transitPass.profile == "Sub23" ? transitPass.profile : "normal";
 

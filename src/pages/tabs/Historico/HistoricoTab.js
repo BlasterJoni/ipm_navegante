@@ -12,7 +12,7 @@ const HistoricoTab = () => {
 
   const months = "Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro";
 
-  const history = useSelector(state => state.data.history);
+  const history = useSelector(state => state.data.activeUser.history);
 
   const allItems = history.map((value, index) => {
     return <HistoricoItem history={value} key={index} />

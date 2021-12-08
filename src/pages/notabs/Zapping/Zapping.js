@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 const Passe = () => {
 
-  const transitPass = useSelector(state => state.data.transitPass);
+  const transitPass = useSelector(state => state.data.activeUser.transitPass);
 
   return (
     <IonPage>

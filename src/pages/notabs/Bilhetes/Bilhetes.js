@@ -10,7 +10,7 @@ import DefaultPageLayout from '../DefaulPageLayout';
 const Bilhetes = () => {
 
   const history = useHistory();
-  const tickets = useSelector(state => state.data.tickets);
+  const tickets = useSelector(state => state.data.activeUser.tickets);
 
   const ticketItems = tickets.map((value, index) => {
     return <BilheteItem ticket={value} key={index} index={index} />

@@ -7,7 +7,7 @@ import rootReducer from './reducers'
 const persistConfig = {
   key: 'navegante',
   storage,
-  blacklist: ['data'] // TODO remove when done
+  // blacklist: ['data'] // TODO remove when done
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

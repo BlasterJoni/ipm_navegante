@@ -7,7 +7,6 @@ import {
     IonTabButton,
     IonTabs,
 } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
 import { ticketOutline, timeOutline, locationOutline, calendarOutline, personOutline } from 'ionicons/icons';
 import TitulosTab from './pages/tabs/Titulos/TitulosTab';
 import HorarioTab from './pages/tabs/Horario/HorarioTab';
@@ -21,11 +20,13 @@ import Bilhete from './pages/notabs/Bilhete/Bilhete'
 import Conta from './pages/notabs/Conta/Conta';
 import Zapping from './pages/notabs/Zapping/Zapping';
 import Estatuto from './pages/notabs/Estatuto/Estatuto';
-
+import MetodosPagamento from './pages/notabs/MetodosPagamento/MetodosPagamento';
+import AdicionarMetodo from './pages/notabs/AdicionarMetodo/AdicionarMetodo';
 
 const BasePage = () => {
     return (
-        <IonReactRouter>
+        <IonRouterOutlet>
+
             <Route path="/notabs" render={() => {
                 return (
                     <IonRouterOutlet>
@@ -33,22 +34,28 @@ const BasePage = () => {
                             <Alertas />
                         </Route>
                         <Route exact path="/notabs/passe">
-                            <Passe/>
+                            <Passe />
                         </Route>
                         <Route exact path="/notabs/bilhetes">
-                            <Bilhetes/>
+                            <Bilhetes />
                         </Route>
                         <Route exact path="/notabs/bilhetes/:index">
                             <Bilhete />
                         </Route>
                         <Route exact path="/notabs/zapping">
-                            <Zapping/>
+                            <Zapping />
                         </Route>
                         <Route exact path="/notabs/conta">
-                            <Conta/>
+                            <Conta />
                         </Route>
                         <Route exact path="/notabs/estatuto">
-                            <Estatuto/>
+                            <Estatuto />
+                        </Route>
+                        <Route exact path="/notabs/metodospagamento">
+                            <MetodosPagamento />
+                        </Route>
+                        <Route exact path="/notabs/adicionarmetodo">
+                            <AdicionarMetodo />
                         </Route>
                     </IonRouterOutlet>
                 )
@@ -101,14 +108,8 @@ const BasePage = () => {
                         </IonTabBar>
                     </IonTabs>
                 )} />
-
-            <Route
-                path="/"
-                render={() => <Redirect to="/tabs/titulos" />}
-                exact={true}
-            />
-        </IonReactRouter>
-
+            <Route exact path="/" render={() => <Redirect to="/tabs/titulos" />} />
+        </IonRouterOutlet>
 
     );
 };
