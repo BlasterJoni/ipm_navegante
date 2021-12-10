@@ -3,7 +3,6 @@ import styles from "./MetodosPagamento.module.css";
 import { useSelector } from "react-redux";
 import DefaultPageLayout from "../DefaulPageLayout";
 import React, { useState } from "react";
-import { arrowUp, checkmarkCircleOutline } from "ionicons/icons";
 import MetodoPagamentoItem from "./MetodoPagamentoItem/MetodoPagamentoItem"
 
 const MetodosPagamento = () => {
@@ -11,7 +10,7 @@ const MetodosPagamento = () => {
   const methods = useSelector(state => state.data.activeUser.user.payment);
 
   const methodItems = methods.map((value, index) => {
-    return <MetodoPagamentoItem method={value} key={index} />
+    return <MetodoPagamentoItem method={value} key={index} index={index} />
   });
 
   return (

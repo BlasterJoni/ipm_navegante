@@ -6,24 +6,30 @@ import { useHistory } from 'react-router';
 
 const DefaultPageLayout = (props) => {
 
-    const history = useHistory();
+  const history = useHistory();
 
-    return (
-        <div className={styles.base}>
-        <div className={styles.backArrow}>
-          <IonButton shape="round" fill="clear" color="dark" onClick={() => { history.goBack() }}>
-            <IonIcon icon={arrowBack} />
-          </IonButton>
-        </div>
-        
-        <div className={styles.title}>{props.title} <IonIcon icon={props.icon} /></div>
-
-        <div className={styles.content}>
-          {props.children}
-        </div>
-        
+  return (
+    <div className={styles.base}>
+      <div className={styles.backArrow}>
+        <IonButton shape="round" fill="clear" color="dark" onClick={() => { 
+            if(props.backFunc != null)
+              props.backFunc()
+            else
+              history.goBack() 
+          }}>
+          <IonIcon icon={arrowBack} />
+        </IonButton>
+        {props.image!=null?<img src={props.image} className={styles.cornerImage} alt="Corner"/>:null}
       </div>
-    );
+
+      <div className={styles.title}>{props.title} <IonIcon icon={props.icon} /></div>
+
+      <div className={styles.content}>
+        {props.children}
+      </div>
+
+    </div>
+  );
 };
 
 export default DefaultPageLayout;

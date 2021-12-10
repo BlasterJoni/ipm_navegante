@@ -10,8 +10,8 @@ const HistoricoItem = (props) => {
             <div className={styles.linhas}> {props.history.type} </div>
           </div>
           <div className={styles.colRight}>
-            <div className={styles.data}>{props.history.date.toLocaleDateString()}</div>
-            <div className={styles.hora}>{props.history.date.toTimeString().substr(0,5)}</div>
+            <div className={styles.data}>{new Date(props.history.date).toLocaleDateString()}</div>
+            <div className={styles.hora}>{new Date(props.history.date).toTimeString().substr(0,5)}</div>
           </div>
               
       </div>

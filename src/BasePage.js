@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import {
     IonIcon,
     IonLabel,
@@ -22,6 +22,14 @@ import Zapping from './pages/notabs/Zapping/Zapping';
 import Estatuto from './pages/notabs/Estatuto/Estatuto';
 import MetodosPagamento from './pages/notabs/MetodosPagamento/MetodosPagamento';
 import AdicionarMetodo from './pages/notabs/AdicionarMetodo/AdicionarMetodo';
+import AdicionarCartao from './pages/notabs/AdicionarCartao/AdicionarCartao';
+import AdicionarMbway from './pages/notabs/AdicionarMbway/AdicionarMbway';
+import ComprarBilhete from './pages/notabs/ComprarBilhete/ComprarBilhete';
+import Feratagus from './pages/notabs/ComprarBilhete/OperadoraCompra/Fertagus/Fertagus';
+import ZappingCarregar from './pages/notabs/ZappingCarregar/ZappingCarregar';
+import HorarioFertagus from './pages/notabs/HorarioFertagus/HorarioFertagus';
+import HorarioMTS from './pages/notabs/HorarioMTS/HorarioMTS';
+import HorarioTTSL from './pages/notabs/HorarioTTSL/HorarioTTSL';
 
 const BasePage = () => {
     return (
@@ -29,7 +37,7 @@ const BasePage = () => {
 
             <Route path="/notabs" render={() => {
                 return (
-                    <IonRouterOutlet>
+                    <Switch>
                         <Route exact path="/notabs/alertas">
                             <Alertas />
                         </Route>
@@ -39,8 +47,17 @@ const BasePage = () => {
                         <Route exact path="/notabs/bilhetes">
                             <Bilhetes />
                         </Route>
+                        <Route exact path="/notabs/bilhetes/comprar">
+                            <ComprarBilhete />
+                        </Route>
+                        <Route exact path="/notabs/bilhetes/comprar/Fertagus">
+                            <Feratagus />
+                        </Route>
                         <Route exact path="/notabs/bilhetes/:index">
                             <Bilhete />
+                        </Route>
+                        <Route exact path="/notabs/zapping/carregar">
+                            <ZappingCarregar />
                         </Route>
                         <Route exact path="/notabs/zapping">
                             <Zapping />
@@ -55,9 +72,27 @@ const BasePage = () => {
                             <MetodosPagamento />
                         </Route>
                         <Route exact path="/notabs/adicionarmetodo">
-                            <AdicionarMetodo />
+                            <AdicionarMetodo/>
                         </Route>
-                    </IonRouterOutlet>
+                        <Route exact path="/notabs/adicionarcartao/visa">
+                            <AdicionarCartao type={"Visa"}/>
+                        </Route>
+                        <Route exact path="/notabs/adicionarcartao/mastercard">
+                            <AdicionarCartao type={"Mastercard"}/>
+                        </Route>
+                        <Route exact path="/notabs/adicionarmbway">
+                            <AdicionarMbway/>
+                        </Route>
+                        <Route exact path="/notabs/horario/fertagus">
+                            <HorarioFertagus />
+                        </Route>
+                        <Route exact path="/notabs/horario/MTS">
+                            <HorarioMTS />
+                        </Route>
+                        <Route exact path="/notabs/horario/TTSL">
+                            <HorarioTTSL />
+                        </Route>
+                    </Switch>
                 )
             }} />
             <Route

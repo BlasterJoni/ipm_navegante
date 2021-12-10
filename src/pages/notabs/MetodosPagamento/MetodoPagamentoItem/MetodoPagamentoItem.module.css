@@ -4,8 +4,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid var(--ion-color-medium);
     background-color: var(--ion-background-color);
+    padding: 10px;
+}
+
+.activeItem{
+    height: 75px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--ion-color-medium);
+    background-color: var(--ion-color-light);
     padding: 10px;
 }
 
@@ -25,14 +38,28 @@
     margin-right: 10px;
 }
 
-
-
 .number{
     display: flex;
-    flex-direction: row;
-    font-size: 20px;
+    flex-direction: column;
+    font-size: 18px;
     color: var(--ion-text-color);
-    margin-left: 40px;
     font-weight: bold;
+}
+
+.defaultStamp{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 9px;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: var(--ion-color-primary);
+    color: var(--ion-text-color);
+}
+
+.stampFrame{
+    width: 100px;
 }
 

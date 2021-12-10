@@ -1,0 +1,12 @@
+.content{
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+.list{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}

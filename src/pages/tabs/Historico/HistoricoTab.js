@@ -19,7 +19,7 @@ const HistoricoTab = () => {
   });
 
   const filteredItems = history.filter((value, index, arr) => {
-    return new Date(value.date.toJSON().split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
+    return new Date(value.date.split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
   });
 
   const filteredItemsComponents = filteredItems.map((value, index) => {

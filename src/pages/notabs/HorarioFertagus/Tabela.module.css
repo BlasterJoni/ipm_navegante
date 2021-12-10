@@ -1,0 +1,33 @@
+.table div {
+  padding: 1rem;
+}
+
+.table div table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+.table div table tr :last-child td {
+  border-bottom: 0;
+}
+
+.table div table th {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.table div table td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.table div table th :last-child {
+  border-right: 0;
+}
+
+.table div table td :last-child {
+  border-right: 0;
+}

@@ -1,0 +1,76 @@
+.title{
+    font-weight: bold;
+}
+
+.cardNumber{
+    display: flex;
+    align-items: center ;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cardInfo{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--ion-color-medium);
+}
+
+.twoDigitInput{
+    display: flex;
+    flex-direction: column;
+    width: 55px;
+    border-bottom: 1px solid var(--ion-color-medium);
+}
+
+.threeDigitInput{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    border-bottom: 1px solid var(--ion-color-medium);
+}
+
+.inputRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.inputcolumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonDisabled{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    --background: var(--ion-color-medium);
+}
+
+.button{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.countryButton{
+    width: 100%;
+    text-align: start;
+    background: none;
+}
+
+ion-input{
+    --padding-end: 0px !important;
+    --padding-bottom: 3px !important;
+    --padding-start: 0px !important;
+    --padding-top: 0px !important;
+}
+
+input {
+    border: none;
+    width: 100%;
+    outline: none;
+}

@@ -19,17 +19,17 @@ const Passe = () => {
           </div>
           <div className={styles.info}>
             <div className={styles.modalidade}>
-              <div>Modalidade</div>
+              <div className={styles.bold}>Modalidade</div>
               <div>{transitPass.type}</div>
             </div>
             <div className={styles.bottom}>
               <div className={styles.perfil}>
-                <div>Perfil</div>
+                <div className={styles.bold}>Perfil</div>
                 <div>{transitPass.profile}</div>
               </div>
               <div className={styles.validade}>
-                <div>Validade</div>
-                <div>{transitPass.validity.toLocaleDateString()}</div>
+                <div className={styles.bold}>Validade</div>
+                <div>{new Date(transitPass.validity).toLocaleDateString()}</div>
               </div>
             </div>
           </div>

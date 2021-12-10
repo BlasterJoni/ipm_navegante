@@ -44,7 +44,7 @@ const Estatuto = () => {
           <div className={styles.information}>
             <div className={styles.title}>Validade</div>
             <div className={styles.field}>
-              {status.validity.getMonth()+1 + "/" + status.validity.getFullYear().toString().substring(2, 4)}
+              {new Date(status.validity).getMonth()+1 + "/" + new Date(status.validity).getFullYear().toString().substring(2, 4)}
             </div>
           </div>
 

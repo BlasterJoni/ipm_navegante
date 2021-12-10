@@ -1,63 +1,103 @@
-import { IonPage, IonButton, IonIcon, IonInput,IonContent } from '@ionic/react';
-import { useSelector } from 'react-redux';
-import styles from './AdicionarMetodo.module.css';
-import { cardOutline} from 'ionicons/icons';
-import DefaultPageLayout from '../DefaulPageLayout';
-import React, { useRef, useState } from "react";
-
+import {
+  IonPage,
+  IonIcon,
+  IonButton,
+  IonLoading,
+  IonContent,
+} from "@ionic/react";
+import styles from "./AdicionarMetodo.module.css";
+import { useSelector } from "react-redux";
+import DefaultPageLayout from "../DefaulPageLayout";
+import React, { useState } from "react";
+import { chevronForwardOutline } from "ionicons/icons";
+import { useHistory } from "react-router";
 
 const AdicionarMetodo = () => {
 
-  const cards = useSelector(state => state.data.activeUser.user.payment);
-  const [card, setCard] = useState(0);
-
-//   const handleChange = (object) => {
-//     if (object.target.value.length > object.target.maxLength) {
-//      object.target.value = object.target.value.slice(0, object.target.maxLength)
-//       }
-//     }
-
-
+  const history = useHistory();
 
   return (
     <IonPage>
-      <DefaultPageLayout title="Adicionar Cartão">
-        <IonContent>
-
-            <div >
-                <div className={styles.title}> Número do cartão</div>
-                <div className={styles.cardNumber}>
-                    <IonIcon icon={cardOutline} />
-                    <div className={styles.cardInfo}>
-                        <input placeholder={"0000000000000000"} type="number" onChange={(e) => setCard(() => e.target.value.slice(0, 16))}></input>
-                    </div>
+      <DefaultPageLayout title="Escolha o Método">
+        <IonContent
+          scrollEvents={true}
+          onIonScrollStart={() => {}}
+          onIonScroll={() => {}}
+          onIonScrollEnd={() => {}}
+        >
+          <div className={styles.methodsList}>
+            <div className={styles.border}>
+              <IonButton
+                className={styles.item}
+                fill="clear"
+                color="dark"
+                href="/notabs/adicionarcartao/visa"
+              >
+                <div className={styles.imageAndType}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={"/assets/banks/Visa.png"}
+                      alt="Logo Visa"
+                      className={styles.image}
+                    />
+                  </div>
+                  <div className={styles.title}>Visa</div>
                 </div>
+
+                <div className={styles.arrowContainer}>
+                  <IonIcon icon={chevronForwardOutline} />
+                </div>
+              </IonButton>
             </div>
 
-            <div className={styles.inputRow}>
-                <div className={styles.inputColumn}>
-                    <div className={styles.title}> Data de Validade</div>
-                    <div className={styles.cardInfo}>
-                    <input placeholder={"MM/YY"} type="date"></input>
+            <div className={styles.border}>
+              <IonButton
+                className={styles.item}
+                fill="clear"
+                color="dark"
+                href="/notabs/adicionarcartao/mastercard"
+              >
+                <div className={styles.imageAndType}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={"/assets/banks/Mastercard.png"}
+                      alt="Logo Mastercard"
+                      className={styles.image}
+                    />
+                  </div>
+                  <div className={styles.title}>Mastercard</div>
                 </div>
+
+                <div className={styles.arrowContainer}>
+                  <IonIcon icon={chevronForwardOutline} />
                 </div>
-                <div className={styles.inputColumn}>
-                    <div className={styles.title}> CVV</div>
-                    <div className={styles.cardInfo}>
-                    <input value={card} placeholder={"123"} type="number" onChange={(e) => (setCard(() => e.target.value.slice(0, 3)))}></input>
-                </div>
-                </div>
+              </IonButton>
             </div>
 
-            <div>
-                <div className={styles.title}>País</div>
-                <div className={styles.cardInfo}>
-                    <IonInput value={""} placeholder={"Portugal"} ></IonInput>
+            <div className={styles.border}>
+              <IonButton
+                className={styles.item}
+                fill="clear"
+                color="dark"
+                href={"/notabs/adicionarmbway"}
+              >
+                <div className={styles.imageAndType}>
+                  <div className={styles.imageContainer}>
+                    <img
+                      src={"/assets/banks/MBWay.png"}
+                      alt="Logo MBWay"
+                      className={styles.image}
+                    />
+                  </div>
+                  <div className={styles.title}>MBWay</div>
                 </div>
+
+                <div className={styles.arrowContainer}>
+                  <IonIcon icon={chevronForwardOutline} />
+                </div>
+              </IonButton>
             </div>
-
-            <IonButton className={styles.button}>Adicionar</IonButton>
-
+          </div>
         </IonContent>
       </DefaultPageLayout>
     </IonPage>

@@ -18,22 +18,22 @@ const Bilhetes = () => {
 
   return (
     <IonPage>
-      <DefaultPageLayout title="Os Meus Bilhetes" icon={ticketOutline}>
+      <DefaultPageLayout title="Os Meus Bilhetes" backFunc={()=>{history.push("/tabs/titulos")}}>
         <div className={styles.content}>
-        <IonContent
-          scrollEvents={true}
-          onIonScrollStart={() => { }}
-          onIonScroll={() => { }}
-          onIonScrollEnd={() => { }}
-        >
-          <div className={styles.ticketsList}>
-            {ticketItems}
-          </div>
-        </IonContent>
+          <IonContent
+            scrollEvents={true}
+            onIonScrollStart={() => { }}
+            onIonScroll={() => { }}
+            onIonScrollEnd={() => { }}
+          >
+            <div className={styles.ticketsList}>
+              {ticketItems}
+            </div>
+          </IonContent>
         </div>
 
         <IonFab vertical="bottom" horizontal="end" slot="fixed" className={styles.buyButton}>
-          <IonFabButton>
+          <IonFabButton href="/notabs/bilhetes/comprar">
             <IonIcon icon={cartOutline} />
           </IonFabButton>
         </IonFab>

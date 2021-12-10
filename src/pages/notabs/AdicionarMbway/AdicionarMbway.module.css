@@ -1,0 +1,50 @@
+.inputRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+
+.indicator{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.phoneNumber{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    margin-left: 10px;
+    border-bottom: 1px solid var(--ion-color-medium);
+    width: 150px;
+    
+}
+
+.imageContainer{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.buttonDisabled{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    --background: var(--ion-color-medium);
+}
+
+.button{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+input {
+    border: none;
+    width: 100%;
+    outline: none;
+}

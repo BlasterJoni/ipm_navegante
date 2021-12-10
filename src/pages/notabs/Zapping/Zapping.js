@@ -16,7 +16,7 @@ const Passe = () => {
             <div className={styles.saldoDisponivel}>Saldo Disponivel</div>
             <div className={styles.saldo}>50.00€</div>
           </div>
-          <div className={styles.button}><IonButton expand="block" color="medium" >Recarregar</IonButton></div>   
+          <div className={styles.button}><IonButton expand="block" color="medium" href="/notabs/zapping/carregar">Recarregar</IonButton></div>   
         </div>
       </TicketShapeBasePage>
     </IonPage>

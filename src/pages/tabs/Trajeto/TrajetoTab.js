@@ -7,7 +7,7 @@ const TrajetoTab = () => {
   return (
     <IonPage>
       <DefaultPageLayout title="Trajeto" icon={locationOutline}>
-        TrajetoTab
+        
       </DefaultPageLayout>
     </IonPage>
   );
