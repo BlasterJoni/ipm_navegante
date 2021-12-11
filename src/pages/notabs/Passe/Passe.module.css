@@ -58,3 +58,13 @@
 .bold{
     font-weight: bold;
 }
+
+.renewButton{
+    height: 20px;
+    font-weight: bold;
+    --background: var(--ion-color-dark);
+    --color: var(--ion-color-light);
+    --padding-top: 12px !important;
+    --padding-bottom: 12px !important;
+}
+

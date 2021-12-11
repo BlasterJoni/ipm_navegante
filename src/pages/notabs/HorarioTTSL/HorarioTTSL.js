@@ -10,7 +10,7 @@ import {
   
     return (
       <IonPage>
-        <DefaultPageLayout title="Histórico - TTSL">
+        <DefaultPageLayout title="Horário - TTSL">
           <IonContent
             scrollEvents={true}
             onIonScrollStart={() => { }}

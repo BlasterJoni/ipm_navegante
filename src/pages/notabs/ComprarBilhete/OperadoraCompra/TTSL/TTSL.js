@@ -1,13 +1,13 @@
-import { IonButton, IonIcon, IonPage, IonFabButton } from '@ionic/react';
-import { chevronForwardOutline, checkmarkCircleOutline } from 'ionicons/icons';
+import { IonButton, IonContent, IonIcon, IonPage, IonFabButton } from '@ionic/react';
+import { chevronForwardOutline, arrowBack, checkmarkCircleOutline } from 'ionicons/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
 import DefaultPageLayout from '../../../DefaulPageLayout';
-import styles from './Fertagus.module.css';
+import styles from './TTSL.module.css';
 import { actions } from '../../../../../redux/reducers/reducer';
 
-const Fertagus = (props) => {
+const TTSL = (props) => {
 
     const history = useHistory();
 
@@ -15,34 +15,16 @@ const Fertagus = (props) => {
 
     const dispatch = useDispatch();
 
-    const [origem, setOrigem] = useState(history.location.state?history.location.state.origem:"");
-    const [destino, setDestino] = useState(history.location.state?history.location.state.destino:"");
-    const [step, setStep] = useState(history.location.state?2:0);
+    const [viagem, setViagem] = useState(history.location.state?history.location.state.viagem:"");
+    const [preco, setPreco] = useState(history.location.state?history.location.state.preco:"");
+    const [step, setStep] = useState(history.location.state?1:0);
 
-    const estacoes = ["Roma-Areeiro", "Entrecampos", "Sete Rios", "Campolide", "Pragal", "Corroios", "Foros de Amora", "Fogueteiro", "Coina", "Penalva", "Pinhal Novo", "Vendas do Alcaida", "Palmela", "Setúbal"];
+    const viagens = ["Barreiro -> Terreiro do Paço", "Cacilhas - > Cais do Sodré", "Trafaria -> Porto Brandão -> Belém", "Montijo -> Cais do Sodré", "Seixal -> Cais do Sodré"];
+    const precos = ["2.45€", "1.30€", "1.25€", "2.80€", "2.45€"];
 
-    const origemDivs = estacoes.map((value, index) => {
+    const origemDivs = viagens.map((value, index) => {
         return (
-            <div onClick={() => { setOrigem(value) }} className={styles.estacao + " " + (origem === value ? styles.selectedEstacao : null)} key={index}>
-                {value}
-            </div>
-        );
-    })
-
-    const calcularPreco = () => {
-        const nEstacoes = Math.abs(estacoes.indexOf(origem)-estacoes.indexOf(destino));
-        const preco = 1.5 + (nEstacoes)*0.25;
-        
-        return preco.toFixed(2);
-    }
-
-    const destinoDivs = estacoes.map((value, index) => {
-        return (
-            <div onClick={() => {
-                if (origem !== value) {
-                    setDestino(value)
-                }
-            }} className={styles.estacao + " " + (origem === value ? styles.selected : null) + " " + (destino === value ? styles.selectedEstacao : null)} key={index}>
+            <div onClick={() => { setViagem(value); setPreco(precos[viagens.indexOf(value)]); }} className={styles.viagem + " " + (viagem === value ? styles.selectedViagem : null)} key={index}>
                 {value}
             </div>
         );
@@ -53,18 +35,23 @@ const Fertagus = (props) => {
     switch (step) {
         case 0:
             stepHTML = (
-                <DefaultPageLayout title={"Selecione Origem"} backFunc={() => { history.goBack() }} image="/assets/operators/Fertagus.png">
+                <DefaultPageLayout title={"Selecione Viagem"} backFunc={() => { history.goBack() }} image="/assets/operators/TTSL.png">
                     <div className={styles.content}>
                         <div className={styles.list}>
                             {origemDivs}
                         </div>
                         <div className={styles.bottomControls}>
-                            <IonFabButton className={origem !== "" ? null : styles.displayNone} onClick={() => { setStep(1) }}>
+                            <IonFabButton className={viagem !== "" ? null : styles.displayNone} onClick={() => { 
+                                setStep(1) 
+                                history.replace(history.location.pathname, {
+                                    viagem,
+                                    preco
+                                });
+                            }}>
                                 <IonIcon icon={chevronForwardOutline} />
                             </IonFabButton>
                             <div className={styles.pageTicker}>
                                 <div className={styles.dot + " " + styles.selectedDot}></div>
-                                <div className={styles.dot}></div>
                                 <div className={styles.dot}></div>
                             </div>
                         </div>
@@ -74,35 +61,8 @@ const Fertagus = (props) => {
             break;
         case 1:
             stepHTML = (
-                <DefaultPageLayout title={"Selecione Destino"} backFunc={() => { setStep(0) }} image="/assets/operators/Fertagus.png">
-                    <div className={styles.content}>
-                        <div className={styles.list}>
-                            {destinoDivs}
-                        </div>
-                        <div className={styles.bottomControls}>
-                            <IonFabButton className={destino !== "" ? null : styles.displayNone} onClick={() => { 
-                                setStep(2);
-                                history.replace(history.location.pathname, {
-                                    origem,
-                                    destino
-                                });
-                            }}>
-                                <IonIcon icon={chevronForwardOutline} />
-                            </IonFabButton>
-                            <div className={styles.pageTicker}>
-                                <div className={styles.dot}></div>
-                                <div className={styles.dot + " " + styles.selectedDot}></div>
-                                <div className={styles.dot}></div>
-                            </div>
-                        </div>
-                    </div>
-                </DefaultPageLayout>
-            )
-            break;
-        case 2:
-            stepHTML = (
                 <DefaultPageLayout title={"Confirme Pagamento"} backFunc={() => { 
-                    setStep(1); 
+                    setStep(0); 
                     history.replace(history.location.pathname, null);
                 }}>
                     <div className={styles.content}>
@@ -112,17 +72,17 @@ const Fertagus = (props) => {
                             <div>
                                 <div className={styles.information}>
                                     <div className={styles.title}>Transporte</div>
-                                    <div className={styles.field}>{"Fertagus"}</div>
+                                    <div className={styles.field}>{"TTSL"}</div>
                                 </div>
 
                                 <div className={styles.information}>
                                     <div className={styles.title}>Bilhete</div>
-                                    <div className={styles.field}>{origem +" -> "+ destino}</div>
+                                    <div className={styles.field}>{viagem}</div>
                                 </div>
 
                                 <div className={styles.information}>
                                     <div className={styles.title}>Total</div>
-                                    <div className={styles.field}>{calcularPreco() + "€"}</div>
+                                    <div className={styles.field}>{preco}</div>
                                 </div>
 
                                 <div className={styles.information}>
@@ -151,11 +111,10 @@ const Fertagus = (props) => {
                         </div>  
                         <div className={styles.bottomControls}>
                             <IonButton className={styles.lastStepButton} onClick={()=>{
-                                dispatch(actions.addTicket("Fertagus", origem+" -> "+destino));
-                                setStep(3);
+                                dispatch(actions.addTicket("TTSL", viagem));
+                                setStep(2);
                             }}>Confirmar</IonButton>
                             <div className={styles.pageTicker}>
-                                <div className={styles.dot}></div>
                                 <div className={styles.dot}></div>
                                 <div className={styles.dot + " " + styles.selectedDot}></div>
                             </div>
@@ -164,7 +123,7 @@ const Fertagus = (props) => {
                 </DefaultPageLayout>
             )
             break;
-        case 3:
+        case 2:
             stepHTML = (
                 <div className={styles.lastStep}>
                     <div className={styles.lastStepContent}>
@@ -180,7 +139,6 @@ const Fertagus = (props) => {
             break;
     }
 
-
     return (
         <IonPage>
             {stepHTML}
@@ -188,4 +146,4 @@ const Fertagus = (props) => {
     );
 };
 
-export default Fertagus;
+export default TTSL;

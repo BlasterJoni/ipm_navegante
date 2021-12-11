@@ -1,4 +1,4 @@
-import { IonIcon, IonFabButton, IonRouterLink } from '@ionic/react';
+import { IonIcon, IonFabButton } from '@ionic/react';
 import { notificationsOutline } from 'ionicons/icons';
 import styles from './DefaultPageLayout.module.css';
 

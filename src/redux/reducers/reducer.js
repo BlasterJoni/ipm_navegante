@@ -9,7 +9,9 @@ export const actionTypes = {
   AddMBWay: "[AddMBWay] Action",
   SetActivePayment: "[SetActivePayment] Action",
   AddTicket: "[AddTicket] Action",
-  LogOut: "[LogOut] Action"
+  LogOut: "[LogOut] Action",
+  RenewPass: "[RenewPass] Action",
+  AddZapping: "[AddZapping] Action"
 };
 
 const initialListState = {
@@ -18,7 +20,7 @@ const initialListState = {
   alerts: [
     {
       title: "Bloqueio nas linhas",
-      text: "Estacionamento indevido poderá causa atrasos na linha 1.",
+      text: "Estacionamento indevido poderá causar atrasos na linha 1.",
       date: new Date(2021, 10, 30, 13, 30, 0, 0),
       operator: "MTS"
     },
@@ -36,7 +38,7 @@ const initialListState = {
     },
     {
       title: "Bloqueio nas linhas",
-      text: "Estacionamento indevido poderá causa atrasos na linha 1.",
+      text: "Estacionamento indevido poderá causar atrasos na linha 1.",
       date: new Date(2021, 10, 30, 13, 30, 0, 0),
       operator: "MTS"
     },
@@ -54,7 +56,7 @@ const initialListState = {
     },
     {
       title: "Bloqueio nas linhas",
-      text: "Estacionamento indevido poderá causa atrasos na linha 1.",
+      text: "Estacionamento indevido poderá causar atrasos na linha 1.",
       date: new Date(2021, 10, 30, 13, 30, 0, 0),
       operator: "MTS"
     },
@@ -72,7 +74,7 @@ const initialListState = {
     },
     {
       title: "Bloqueio nas linhas",
-      text: "Estacionamento indevido poderá causa atrasos na linha 1.",
+      text: "Estacionamento indevido poderá causar atrasos na linha 1.",
       date: new Date(2021, 10, 30, 13, 30, 0, 0),
       operator: "MTS"
     },
@@ -90,7 +92,7 @@ const initialListState = {
     },
     {
       title: "Bloqueio nas linhas",
-      text: "Estacionamento indevido poderá causa atrasos na linha 1.",
+      text: "Estacionamento indevido poderá causar atrasos na linha 1.",
       date: new Date(2021, 10, 30, 13, 30, 0, 0),
       operator: "MTS"
     },
@@ -148,7 +150,7 @@ const initialListState = {
       history: [
         {
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           date: new Date(2021, 10, 28, 17, 30, 0, 0)
         },
         {
@@ -163,7 +165,7 @@ const initialListState = {
         },
         {
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           date: new Date(2021, 10, 28, 17, 30, 0, 0)
         },
         {
@@ -178,7 +180,7 @@ const initialListState = {
         },
         {
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           date: new Date(2021, 10, 28, 17, 30, 0, 0)
         },
         {
@@ -203,7 +205,7 @@ const initialListState = {
         },
         {
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           date: new Date(2021, 10, 28, 17, 30, 0, 0)
         },
         {
@@ -221,13 +223,13 @@ const initialListState = {
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -239,19 +241,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -263,19 +265,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -287,19 +289,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -311,19 +313,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -335,19 +337,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -359,19 +361,19 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "96158466b39fe7a75cf065cf64762324openplskthxbye",
           operator: "Fertagus",
-          type: "Pragal->Setúbal",
+          type: "Pragal -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
           id: "5621ece98f2bdc9e962021c53d99be71openplskthxbye",
           operator: "Fertagus",
-          type: "Setúbal->Pragal",
+          type: "Setúbal -> Pragal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
         {
@@ -383,7 +385,7 @@ const initialListState = {
         {
           id: "1d24213f609dc357307ba37839c07ac1openplskthxbye",
           operator: "Fertagus",
-          type: "Fogueteiro->Setúbal",
+          type: "Fogueteiro -> Setúbal",
           validity: new Date(2021, 12, 31, 0, 0, 0, 0)
         },
       ],
@@ -415,7 +417,14 @@ export const reducer = (state = initialListState, action) => {
       return { ...state, activeUser: state.users[action.payload] }
     }
     case actionTypes.LogOut: {
-      return { ...state, activeUser: null }
+      return { 
+        ...state, 
+        activeUser: null,
+        users:{
+          ...state.users,
+          [state.activeUser.user.email]: state.activeUser
+        } 
+      }
     }
     case actionTypes.UpdateUserInfo: {
       return {
@@ -486,6 +495,30 @@ export const reducer = (state = initialListState, action) => {
         }
       }
     }
+    case actionTypes.RenewPass: {
+      return {
+        ...state,
+        activeUser: {
+          ...state.activeUser,
+          transitPass: {
+            ...state.activeUser.transitPass,
+            validity: new Date(new Date(state.activeUser.transitPass.validity).setMonth(new Date(state.activeUser.transitPass.validity).getMonth() + 1)).toJSON()
+          }
+        }
+      }
+    }
+    case actionTypes.AddZapping:{
+      return {
+        ...state, 
+        activeUser: {
+          ...state.activeUser,
+          zapping:{
+            ...state.activeUser.zapping,
+            balance: state.activeUser.zapping.balance + action.payload
+          }
+        }
+      }
+    }
     default:
       return state;
   }
@@ -525,5 +558,7 @@ export const actions = {
       validity: new Date(new Date().setFullYear(new Date().getFullYear() + 1)), 
       id:[...Array(32)].map(() => Math.floor(Math.random() * 16).toString(16)).join('')+"openplskthxbye"}
   }),
+  renewPass: () => ({type: actionTypes.RenewPass}),
+  addZapping: (price) => ({type: actionTypes.AddZapping, payload: price}),
   logOut: () => ({ type: actionTypes.LogOut })
 };

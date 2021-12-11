@@ -8,7 +8,7 @@ const TitulosTab = () => {
 
   return (
     <IonPage>
-      <DefaultPageLayout title="Titulos" icon={ticketOutline}>
+      <DefaultPageLayout title="Títulos" icon={ticketOutline}>
           <div className={styles.base}>
             <Cartao />
             <div className={styles.buttonList}>

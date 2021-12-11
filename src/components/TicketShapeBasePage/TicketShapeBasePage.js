@@ -1,7 +1,6 @@
-import { useRef, useEffect } from "react";
-import { IonIcon, IonContent, IonPage, IonButton } from '@ionic/react';
+import { IonIcon, IonPage, IonButton } from '@ionic/react';
 import styles from './TicketShapeBasePage.module.css';
-import { arrowBack, notificationsOutline } from 'ionicons/icons';
+import { arrowBack} from 'ionicons/icons';
 import { AwesomeQRCode } from "@awesomeqr/react";
 import { useHistory } from "react-router";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -16,7 +15,12 @@ const TicketShapeBasePage = (props) => {
         <IonPage>
             <div className={styles.base}>
                 <div className={styles.arrowRow}>
-                    <IonButton shape="round" fill="clear" color="dark" size="default" onClick={() => { history.goBack() }}>
+                    <IonButton shape="round" fill="clear" color="dark" size="default" onClick={() => {
+                        if (props.backFunc != null)
+                            props.backFunc()
+                        else
+                            history.goBack()
+                    }}>
                         <IonIcon icon={arrowBack} />
                     </IonButton>
                 </div>

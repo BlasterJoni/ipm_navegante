@@ -27,7 +27,7 @@ const HorarioFertagus = () => {
 
   return (
     <IonPage>
-      <DefaultPageLayout title="Histórico - Fertagus">
+      <DefaultPageLayout title="Horário - Fertagus">
         <IonContent
           scrollEvents={true}
           onIonScrollStart={() => { }}

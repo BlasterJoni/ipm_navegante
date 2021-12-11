@@ -15,6 +15,7 @@ import HistoricoTab from './pages/tabs/Historico/HistoricoTab'
 import UserTab from './pages/tabs/User/UserTab'
 import Alertas from './pages/notabs/Alertas/Alertas';
 import Passe from './pages/notabs/Passe/Passe';
+import RenovarPasse from './pages/notabs/Passe/RenovarPasse/RenovarPasse';
 import Bilhetes from './pages/notabs/Bilhetes/Bilhetes'
 import Bilhete from './pages/notabs/Bilhete/Bilhete'
 import Conta from './pages/notabs/Conta/Conta';
@@ -25,7 +26,9 @@ import AdicionarMetodo from './pages/notabs/AdicionarMetodo/AdicionarMetodo';
 import AdicionarCartao from './pages/notabs/AdicionarCartao/AdicionarCartao';
 import AdicionarMbway from './pages/notabs/AdicionarMbway/AdicionarMbway';
 import ComprarBilhete from './pages/notabs/ComprarBilhete/ComprarBilhete';
-import Feratagus from './pages/notabs/ComprarBilhete/OperadoraCompra/Fertagus/Fertagus';
+import Fertagus from './pages/notabs/ComprarBilhete/OperadoraCompra/Fertagus/Fertagus';
+import MTS from './pages/notabs/ComprarBilhete/OperadoraCompra/MTS/MTS';
+import TTSL from './pages/notabs/ComprarBilhete/OperadoraCompra/TTSL/TTSL';
 import ZappingCarregar from './pages/notabs/ZappingCarregar/ZappingCarregar';
 import HorarioFertagus from './pages/notabs/HorarioFertagus/HorarioFertagus';
 import HorarioMTS from './pages/notabs/HorarioMTS/HorarioMTS';
@@ -44,6 +47,9 @@ const BasePage = () => {
                         <Route exact path="/notabs/passe">
                             <Passe />
                         </Route>
+                        <Route exact path="/notabs/passe/renovar">
+                            <RenovarPasse />
+                        </Route>
                         <Route exact path="/notabs/bilhetes">
                             <Bilhetes />
                         </Route>
@@ -51,7 +57,13 @@ const BasePage = () => {
                             <ComprarBilhete />
                         </Route>
                         <Route exact path="/notabs/bilhetes/comprar/Fertagus">
-                            <Feratagus />
+                            <Fertagus />
+                        </Route>
+                        <Route exact path="/notabs/bilhetes/comprar/MTS">
+                            <MTS />
+                        </Route>
+                        <Route exact path="/notabs/bilhetes/comprar/TTSL">
+                            <TTSL />
                         </Route>
                         <Route exact path="/notabs/bilhetes/:index">
                             <Bilhete />
