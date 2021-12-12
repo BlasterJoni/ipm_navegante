@@ -11,9 +11,14 @@ const BilheteItem = (props) => {
           <div className={styles.imageContainer}>
             <img src={"/assets/operators/" + props.ticket.operator + ".png"} alt="Logo de transporte" className={styles.image} />
           </div>
-          <IonLabel text-wrap className={styles.title}>
-            {props.ticket.type}
-          </IonLabel>
+          <div className={styles.labels}>
+            <IonLabel text-wrap className={styles.title}>
+              {props.ticket.type}
+            </IonLabel>
+            <IonLabel text-wrap className={styles.validade}>
+              Válido até: {new Date(props.ticket.validity).toLocaleDateString()}
+            </IonLabel>
+          </div>
         </div>
 
         <div className={styles.arrowContainer}>

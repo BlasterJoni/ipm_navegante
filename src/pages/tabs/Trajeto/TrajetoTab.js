@@ -1,6 +1,6 @@
 import { IonPage, IonInput, IonModal, IonButton, IonDatetime, IonSelect, IonSelectOption, IonContent, IonIcon } from '@ionic/react';
 import styles from './TrajetoTab.module.css';
-import { arrowBack, busOutline, chevronBack, chevronForward, locationOutline, settingsOutline, subway, train, trainOutline, trainSharp, walk } from 'ionicons/icons';
+import { arrowBack, busOutline, chevronBack, chevronDownOutline, chevronForward, chevronUpOutline, locationOutline, settingsOutline, subway, train, trainOutline, trainSharp, walk } from 'ionicons/icons';
 import DefaultPageLayout from '../DefaultPageLayout';
 import { useRef, useEffect, useState } from 'react';
 
@@ -102,7 +102,8 @@ const TrajetoTab = () => {
           {showModal ?
             <div className={styles.trajeto}>
               <div className={styles.tabBoxTop} onClick={() => { setShowModal(false) }}>
-                <div className={styles.pullTab}></div>
+                <div className={styles.maisDetalhes}>Esconder Detalhes</div>
+                <IonIcon icon={chevronDownOutline}></IonIcon>
               </div>
               <img src="/assets/trajeto.png"></img>
             </div>
@@ -115,7 +116,8 @@ const TrajetoTab = () => {
               </IonButton>
               <img src="/assets/mapa.png"></img>
               <div className={styles.tabBox} onClick={() => { setShowModal(true) }}>
-                <div className={styles.pullTab}></div>
+                <IonIcon icon={chevronUpOutline}></IonIcon>
+                <div className={styles.maisDetalhes}>Mais Detalhes</div>
               </div>
             </div>
           }

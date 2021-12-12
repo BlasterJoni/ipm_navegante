@@ -18,16 +18,20 @@ const HistoricoTab = () => {
     return <HistoricoItem history={value} key={index} />
   });
 
-  const filteredItems = history.filter((value, index, arr) => {
-    return new Date(value.date.split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
-  });
+  // const filteredItems = history.filter((value, index, arr) => {
+  //   return new Date(value.date.split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
+  // });
 
-  const filteredItemsComponents = filteredItems.map((value, index) => {
-    return <HistoricoItem history={value} key={index} />
-  });
+  // const filteredItemsComponents = filteredItems.map((value, index) => {
+  //   return <HistoricoItem history={value} key={index} />
+  // });
 
   const historyItems = () => {
-    return selectedDate == null ? allItems : filteredItemsComponents;
+    return selectedDate == null ? allItems : history.filter((value, index, arr) => {
+      return new Date(value.date.split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
+    }).map((value, index) => {
+      return <HistoricoItem history={value} key={index} />
+    });
   }
 
   return (

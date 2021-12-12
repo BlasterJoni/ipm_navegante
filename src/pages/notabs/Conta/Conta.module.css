@@ -32,9 +32,11 @@
 
 .photo{    
     height: 100px;
+    width: 100px;
     border-radius: 50px;
     border: 1px solid var(--ion-color-medium);
     margin-bottom: 15px;
+    object-fit: cover;
 }
 
 .information{

@@ -14,7 +14,7 @@ const Estatuto = () => {
 
   const hiddenFileInput = React.useRef();
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
 
@@ -59,10 +59,10 @@ const Estatuto = () => {
                   ref={hiddenFileInput}
                   onChange={handleChange}
                 />
-                <div className={styles.submitFile}>
-                  <IonButton fill="clear" color="dark" onClick={handleClick}>
+                <div className={styles.submitFile} onClick={handleClick}>
+                  <div fill="clear" color="dark" className={styles.fileButton}>
                     {fileName}
-                  </IonButton>
+                  </div>
                   <IonIcon icon={arrowUp} />
                 </div>
                 <IonButton className={fileUploaded ? styles.button : styles.buttonDisabled} disabled={!fileUploaded} onClick={submitFile}>

@@ -23,7 +23,7 @@ const MetodosPagamento = () => {
           onIonScrollEnd={() => { }}>
           <div className={styles.content}>
             {methodItems}
-            <IonButton className={styles.button} href="/notabs/adicionarmetodo"><div>Adicionar novo metodo</div></IonButton>
+            <IonButton className={styles.button} href="/notabs/adicionarmetodo"><div>Adicionar novo método</div></IonButton>
           </div>
         </IonContent>
       </DefaultPageLayout>

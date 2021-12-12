@@ -1,4 +1,4 @@
-import { IonPage, IonButton, IonIcon, IonFab, IonFabButton, IonContent } from '@ionic/react';
+import { IonPage, IonButton, IonIcon, IonFab, IonFabButton, IonContent, IonLabel } from '@ionic/react';
 import { useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import styles from './Bilhetes.module.css';
@@ -32,11 +32,12 @@ const Bilhetes = () => {
           </IonContent>
         </div>
 
-        <IonFab vertical="bottom" horizontal="end" slot="fixed" className={styles.buyButton}>
-          <IonFabButton href="/notabs/bilhetes/comprar">
+        <div className={styles.buyButton}>
+          <IonButton mode="ios" href="/notabs/bilhetes/comprar">
             <IonIcon icon={cartOutline} />
-          </IonFabButton>
-        </IonFab>
+            <IonLabel className={styles.comprarBilhete}>Comprar Bilhete</IonLabel>
+          </IonButton>
+        </div>
       </DefaultPageLayout>
     </IonPage>
   );

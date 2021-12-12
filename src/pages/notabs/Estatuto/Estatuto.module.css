@@ -48,6 +48,10 @@
     padding-right: 5px;
 }
 
+.fileButton{
+    margin-left: 15px;
+}
+
 .file{
     display: none;
 }

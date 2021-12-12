@@ -33,5 +33,11 @@
 }
 
 .buyButton{
-    margin: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.comprarBilhete{
+    margin-left: 3px;
 }
