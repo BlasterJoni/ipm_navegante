@@ -28,7 +28,7 @@ const HistoricoTab = () => {
 
   const historyItems = () => {
     return selectedDate == null ? allItems : history.filter((value, index, arr) => {
-      return new Date(value.date.split("T")[0]).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
+      return new Date(value.date).toLocaleDateString('pt-PT') === new Date(selectedDate).toLocaleDateString('pt-PT');
     }).map((value, index) => {
       return <HistoricoItem history={value} key={index} />
     });
