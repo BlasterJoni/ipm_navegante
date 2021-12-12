@@ -208,6 +208,11 @@ const ZappingCarregar = (props) => {
               </div>
             </div>
           </div>
+
+          {!canCharge(3) ? (
+            <div className={styles.error}>Limite de zapping alcançado.</div>
+          ) : null}
+
           {buttonpressed > 0 ? (
             <IonButton
               className={styles.button}

@@ -1,4 +1,4 @@
-import { IonIcon, IonFabButton } from '@ionic/react';
+import { IonIcon, IonFabButton, IonBadge } from '@ionic/react';
 import { notificationsOutline } from 'ionicons/icons';
 import styles from './DefaultPageLayout.module.css';
 
@@ -8,14 +8,18 @@ const DefaultPageLayout = (props) => {
             <div className={styles.header}>
                 <img src={"/assets/logo.png"} alt="Navegante's Logo" className={styles.logo} />
                 <IonFabButton size="small" color="light" href="/notabs/alertas">
-                    <IonIcon icon={notificationsOutline}/>
+                    <IonIcon icon={notificationsOutline} />
                 </IonFabButton>
             </div>
-            <div className={styles.contentArea}>
-                <p className={styles.title}>{props.title} <IonIcon icon={props.icon} /></p>
-                <div className={styles.content}>
-                    {props.children}
-                </div>
+            <div className={styles.contentArea + " " + (props.clean?"":styles.padding)}>
+                {props.clean ? props.children :
+                    <>
+                        <p className={styles.title}>{props.title} <IonIcon icon={props.icon} /></p>
+                        <div className={styles.content}>
+                            {props.children}
+                        </div>
+                    </>
+                }
             </div>
         </div>
     );
