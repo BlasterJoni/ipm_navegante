@@ -1,10 +1,10 @@
-<p align="center" style="text-align:center; height:150px; margin:50px"><img src="./Logo.png"/></p>
+<p align="center" style="margin:50px"><img src="./Logo.png" height="150"/></p>
 
 <p align="center">
 Navegante is a public tansportation app with the purpose of replacing the tickets while also providing various utilities to ease the use of public transportation.
 </p>
 
-<p align="center" style="text-align:center; height:650px; margin:20px"><img src="./home.png"/> <img src="./ticket.png"/></p>
+<p align="center" style="margin:20px"><img src="./home.png" height="650"/> <img src="./ticket.png" height="650"/></p>
 
 ## Technologies used
 
