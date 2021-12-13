@@ -6,6 +6,9 @@ Navegante is a public tansportation app with the purpose of replacing the ticket
 
 <p align="center" style="margin:20px"><img src="./home.png" height="650"/> <img src="./ticket.png" height="650"/></p>
 
+## Download APK
+[Here](https://github.com/BlasterJoni/ipm_navegante/releases)
+
 ## Technologies used
 
 - React
@@ -13,6 +16,8 @@ Navegante is a public tansportation app with the purpose of replacing the ticket
 
 ## Compile & Run Instrunctions
 
+Requires either Android Studio for Android, or XCode for IOS, to already be setup.
+
 1. ```npm install```
-2. ```ionic capacitor build <platform ios or android>```
-3. Open the platform's IDE and run on the emulator
+2. ```ionic capacitor build <platform: "ios" or "android">```
+3. The platform's IDE will open. Run on the emulator.
